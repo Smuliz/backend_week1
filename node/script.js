@@ -1,2 +1,2 @@
 'use strict';
-console.log("This is JavaScript");
+console.log('rivi 2', "This is JavaScript");
