@@ -1,8 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 3000
-app.use(express.static('public'))
+const express = require('express');
+const app = express();
+const port = 3000;
 
+app.set('views', './views');
+app.set('view engine', 'pug');
+
+app.use(express.static('public'));
+
+app.get('/', (reg, res) => {
+  res.render('index');
+})
 app.get('/catinfo', (req, res) => {
     const cat = {
       name: 'Frank',
